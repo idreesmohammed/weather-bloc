@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weatherapp/bloc/weather_bloc.dart';
-import 'package:weatherapp/bloc/weather_event.dart';
+
 import 'package:weatherapp/landingfolder/landingpage.dart';
 
 void main() {
@@ -51,6 +51,5 @@ Future<Position> _determinePosition() async {
     return await Future.error(
         'Location permissions are permanently denied, we cannot request permissions.');
   }
-  print(Geolocator.getCurrentPosition());
   return await Geolocator.getCurrentPosition();
 }

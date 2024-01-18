@@ -15,9 +15,7 @@ class PermissionHandlerBloc
     on<PermissionHandlerActionEvent>((event, emit) async {
       StreamSubscription<ServiceStatus> streamSubscription =
           Geolocator.getServiceStatusStream()
-              .listen((ServiceStatus serviceStatus) {
-        print(serviceStatus);
-      });
+              .listen((ServiceStatus serviceStatus) {});
     });
   }
 }
